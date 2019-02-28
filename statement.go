@@ -99,7 +99,7 @@ func (s *Statement) Prepare(sql string) (err os.Error) {
 	return
 }
 
-// Get number of params
+// ParamCount gets number of params
 func (s *Statement) ParamCount() uint16 {
 	return s.paramCount
 }
@@ -332,7 +332,7 @@ func (s *Statement) Execute() (err os.Error) {
 	return
 }
 
-// Get field count
+// FieldCount gets field count
 func (s *Statement) FieldCount() uint64 {
 	if s.checkResult() {
 		return s.result.fieldCount
@@ -367,7 +367,7 @@ func (s *Statement) BindResult(params ...interface{}) (err os.Error) {
 	return
 }
 
-// Get row count
+// RowCount gets row count
 func (s *Statement) RowCount() uint64 {
 	// Stored mode
 	if s.checkResult() && s.result.mode == RESULT_STORED {

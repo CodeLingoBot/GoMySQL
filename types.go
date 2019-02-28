@@ -14,7 +14,7 @@ type Date struct {
 	Day   uint8
 }
 
-// Get date as string
+// String gets date as string
 func (d *Date) String() string {
 	return fmt.Sprintf("%d-%02d-%02d", d.Year, d.Month, d.Day)
 }
@@ -26,7 +26,7 @@ type Time struct {
 	Second uint8
 }
 
-// Get time as string
+// String gets time as string
 func (t *Time) String() string {
 	return fmt.Sprintf("%02d:%02d:%02d", t.Hour, t.Minute, t.Second)
 }
@@ -41,7 +41,7 @@ type DateTime struct {
 	Second uint8
 }
 
-// Get date/time as string
+// String gets date/time as string
 func (d *DateTime) String() string {
 	return fmt.Sprintf("%d-%02d-%02d %02d:%02d:%02d", d.Year, d.Month, d.Day, d.Hour, d.Minute, d.Second)
 }

@@ -41,7 +41,7 @@ type Field struct {
 type Row []interface{}
 type Map map[string]interface{}
 
-// Get field count
+// FieldCount gets field count
 func (r *Result) FieldCount() uint64 {
 	return r.fieldCount
 }
@@ -62,7 +62,7 @@ func (r *Result) FetchFields() []*Field {
 	return r.fields
 }
 
-// Get row count
+// RowCount gets row count
 func (r *Result) RowCount() uint64 {
 	// Stored mode
 	if r.mode == RESULT_STORED {

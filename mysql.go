@@ -323,7 +323,7 @@ func (c *Client) FreeResult() (err os.Error) {
 	return
 }
 
-// Check if more results are available
+// MoreResults checks if more results are available
 func (c *Client) MoreResults() bool {
 	return c.serverStatus&SERVER_MORE_RESULTS_EXISTS > 0
 }
